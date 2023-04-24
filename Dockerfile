@@ -14,7 +14,7 @@ RUN npm install
 COPY . .
 
 # Build the TypeScript code into JavaScript
-RUN npm run build
+# RUN npm run build
 
 # Expose the port that the API will listen on
 EXPOSE 3000
