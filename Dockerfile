@@ -8,6 +8,7 @@ WORKDIR /app
 COPY package*.json ./
 
 # Install dependencies
+RUN nom install -g nodemon
 RUN npm install
 
 # Copy the rest of the application code to the container
@@ -20,5 +21,5 @@ COPY . .
 EXPOSE 3000
 
 # Start the API when the container is run
-# CMD ["npm run dev"]
-RUN npm run dev
+CMD ["npm", "run", "dev"]
+# RUN npm run dev
